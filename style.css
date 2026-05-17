@@ -10,6 +10,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
         position: absolute;
         z-index: 2;
         padding:20px 50px;
@@ -38,27 +39,29 @@
       }
    
       .menu a {
-        color: white;
+        color: #e7ebef;
         text-decoration: none;
+        font-size: 18px;
         transition:0.3s ;
       }
 
 
       .menu a:hover{
         color: #4f46e5;
+       
       }
 
 
 
 /*--------------------- Main -----------------------*/
 
-
+    
 
       body {
         margin: 0;
-        font-family: Arial, sans-serif;
+        font-family:Georgia, 'Times New Roman', Times, serif;
         scroll-behavior: smooth;
-        background: #f8fafc;
+        background: whitesmoke;
         color: #111;
       }
 
@@ -71,12 +74,13 @@
         align-items: center;
         position: relative;
         color: white;
-        background: linear-gradient(rgba(73, 69, 69, 0.2),rgba(71, 64, 64, 0.1)), url(./hero.PNG);
+        background-image: url(./images/hero.PNG);
         background-size: cover;
         background-position: center;
         
       }
 
+     
       .glass-card {
         width: 40%;
         height: 30%;
@@ -100,11 +104,11 @@
       .hero-text p {
         color: #cbd5e1;
         text-align: center;
-        font-size: 20px;
+        font-size: 30px;
       }
       
       button{
-        width: 150px;
+        width: 190px;
         margin-top: 10px;
         padding: 10px 20px;
         border: none;
@@ -131,84 +135,301 @@
 
     /*------------------- ABOUT --------------------*/
 
-      .image {
-        width: 300px;
-        height: 300px;
-        border-radius: 50%;
-        border: 2px solid peru;
-        box-shadow: 0px 20px 20px rgba(rgb(0,0,0,0.5));
-        margin-left: 80px;
+
+
+      .about-grid {
+        background:  #0a0a0f ;
+        display: grid;
+        grid-template-columns: 320px 650px;
+        grid-template-rows: auto auto;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        color: white;
+        padding: 130px;
       }
 
-
-      .about {
-        display: flex;
-        justify-content: space-evenly;
-        padding: 100px 60px;
-        text-align: center;
-        background: linear-gradient(rgba(73, 69, 69, 0.2),rgba(71, 64, 64, 0.1));
-       }
+      .about-grid h2 {
+        font-size: 2rem;
+      }
       
-      .about-card {
-        max-width: 600px;
-        margin: auto;
-        padding: 50px;
-        background: rgba(255, 247, 247, 0.87);
+      .about-grid, h2, h3, p {
+          color: #94a3b6 ;
+          letter-spacing: 1px;
+          line-height: 1.6;
+      }
+      .card1 {
+        box-shadow: 0 40px 40px rgba(63, 40, 116, 0.2);
         backdrop-filter: blur(10px);
-        border-radius: 50px;
-        box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(139, 92, 246, 0.2);
+        border-radius: 20px;
+        padding: 30px;
+        color: white;
       }
-
-       .about-card h2 {
-        margin-right: 75%;
-      }
-
-      .about-card p {
-        padding: 10px;
-        letter-spacing: 1px;
-      }
-
       
+       img {
+        background-color: #4f46e5;
+       }
 
+      .image-card {
+        grid-row: span 2;
+        text-align: center;
+      }
+
+      .image-card span {
+        margin-top: 30px;
+        font-size: 2.5rem;
+        color: #4f46e5;
+      }
+
+      .image-card img {
+        width: 230px;
+        height: 230px;
+        margin-bottom: 20px;
+        border-radius: 50%;
+        border: 3px solid #4f46e5;
+      }
+
+      .info-card {
+        grid-column: 2;
+      }
+
+      .info-card span {
+        color:#4f46e5;
+      }
+      .skills-card {
+        grid-column: 2;
+      }
+
+      .skills-card span {
+        display: inline-block;
+        margin: 5px;
+        padding: 8px 12px;
+        background: #4f46e5;
+        border-radius: 10px;
+        box-shadow: 0 20px 30px rgba(139, 92, 246, 0.2);
+      }
 
               
-   /* PROJECTS */
+   /*---------------- PROJECTS --------------------*/
+       
       .projects {
-        padding: 60px;
+        padding: 100px;
+        background: #0a0a0f;
+        color: white;
+      }
+      
+      .projects h3 {
+        color: #4f46e5;
+        font-size: 1.5rem;
+      }
+      .section-title {
+        color: whitesmoke;
         text-align: center;
+        font-size: 40px;
+        margin-bottom: 50px;
       }
 
-      .cards {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+      }
+
+      
+      .project-card {
+        background: rgba(20,20,30,0.7);
+        border: 1px solid rgba(139,92,246,0.2);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 25px;
+        transition: 0.3s ease;
+        margin: 30px;
+      }
+
+      .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 20px rgba(139,92,246,0.3);
+      }
+
+      .project-card img {
+        width: 100%;
+        border-radius: 15px;
+        margin-bottom: 20px;
+      }
+
+     .project-card p {
+        color: #cfcfcf;
+        margin: 15px 0;
+      }
+
+      .tags span {
+        display: inline-block;
+        padding: 6px 12px;
+        margin: 5px;
+        border-radius: 10px;
+        background: rgba(139,92,246,0.2);
+      }
+
+     .links {
         margin-top: 20px;
       }
-      
-      .card {
-        width: 150px;
-        padding: 20px;
-        background: white;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      }
 
-    /* CONTACT */
+     .links a {
+        text-decoration: none;
+        padding: 10px 18px;
+        border-radius: 10px;
+        margin-right: 10px;
+        color: white;
+        background: #8b5cf6;
+      }
+      .links a:hover {
+         background: #a78bfa;
+      }
+    /*-------------- CONTACT ---------------*/
       
       .contact {
-        padding: 60px;
+        padding: 20px;
         text-align: center;
-        background: #f5f5f5;
+        background: #111827;
+        color: #f8fafc;
       }
 
-    /* FOOTER */
+    /*-------------- FOOTER ---------------*/
 
       footer {
-        text-align: center;
         padding: 20px;
-        background: #111;
-        color: white;
+        text-align: center;
+        background: #111827;
+        color: #94a3b8;
+        cursor: pointer;
       } 
 
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 620px) and (min-width: 250px){
+ 
+ .logo {
+  font-size: 1rem;
+  margin-bottom: 10px;
+ }
+
+ .menu ul li a {
+  font-size: 1rem;
+ }
+
+  
+  .hero{
+    width: 100%;
+  }
+
+ .hero-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+ }
+
+ .glass-card{
+    width: 250px;
+    height: 200px;
+    margin: 40px 34px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+ .hero-text h1{
+    font-size: 1rem;
+  }
+
+ .hero-text p{
+  font-size: 30px;
+ }
+
+.hero-text .btn{
+  width: 100px;
+  text-align: center;
+  margin-right: 55%;
+}
+
+/* =================================About Me Section================================ */
+
+.about-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-card img{
+  width: 150px;
+  height: 150px;
+  margin-top: 15px;
+}
+
+.image-card{
+  padding: 20px;
+
+}
+
+.image-card span{
+  font-size: 1.5rem;
+}
+
+.image-card h2 {
+  font-size: 1.5rem;
+}
+
+.info-card h2 {
+  font-size: 1.5rem;
+}
+
+.info-card {
+  padding: 20px;
+  height: 250px;
+  width: 250px;
+}
+.info-card p {
+  font-size: 15px;
+}
+
+.skills-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.skills-card h2 {
+  font-size: 1.5rem;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+
+
+/* =====================Projecs section======================  */
+
+.section-title {
+  margin-top: -60px;
+}
+.projects-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.project-card {
+  width: 250px;
+}
+
+}
    
 
       
